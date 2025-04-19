@@ -26,6 +26,9 @@ func Main() {
 	options := &Options{}
 	parser := goFlags.NewParser(options, goFlags.Default)
 	_, err := parser.Parse()
+	if err == nil && options.ConfigFile != "" {
+		err = goFlags.IniParse(options.ConfigFile, options)
+	}
 	if err != nil {
 		if flagsErr, ok := err.(*goFlags.Error); ok && flagsErr.Type == goFlags.ErrHelp {
 			os.Exit(0)

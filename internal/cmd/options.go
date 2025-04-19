@@ -85,6 +85,9 @@ type Options struct {
 
 	// LogOutput is the optional path to the log file.
 	LogOutput string `long:"output" description:"Path to the log file. If not set, write to stdout."`
+
+	// ConfigFile is the optional path to the config file.
+	ConfigFile string `long:"config" description:"Path to the config file."`
 }
 
 // String implements fmt.Stringer interface for Options.
