@@ -173,6 +173,7 @@ Application Options:
                               delayed for a hard-coded period of 3 minutes. Can be specified multiple times.
       --verbose               Verbose output (optional)
       --output=               Path to the log file. If not set, write to stdout.
+      --config=               Path to the config file.
 
 Help Options:
   -h, --help                  Show this help message
